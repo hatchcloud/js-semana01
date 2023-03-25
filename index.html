@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Interactive menu</title>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Menu Calculator</h1>
+
+
+    <section class="number-card">
+        <div class="box-number">
+            <form>
+                <label for="name" class="label-title">Orden a nombre de:</label>
+                <input class="w-100" type="text" id="name" name="name">
+
+                <label for="product" class="no-margin label-title">Producto:</label><br>
+                <div class="flex gap">
+                    <input type="radio" id="option1" name="product" value="Gorra">
+                    <label for="Gorra">Gorra</label><br>
+                </div>
+                <div class="flex gap">
+                    <input type="radio" id="option2" name="product" value="Camisa">
+                    <label for="Camisa">Camisa</label><br>
+                </div>
+                <div class="flex gap">
+                    <input type="radio" id="option3" name="product" value="Pantalón">
+                    <label for="Pantalón">Pantalón</label><br>
+                </div>          
+                <input type="submit" value="Aceptar">
+              </form>
+
+        </div>
+        <div class="box-number resultado flex flex-column gap">
+            <h3>Orden</h3>
+            <div id="result" class="label-title"></div>
+            <p id="resultNumber" class="label-title"></p>
+        </div>
+        <div class="box-number">
+            <div class="flex gap flex-column">
+                <div class="numbers">
+                    <button onclick="clearValue()" value="clear">CE</button>
+                    <button onclick="inputBorrar()" value="delete"><img src="./img/icon-delete.png" alt="delete"></button>
+                    <button onclick="inputDigit(value)" value="/">/</button>
+                </div>
+                <div class="numbers">
+                    <button onclick="inputDigit(value)" value="7">7</button>
+                    <button onclick="inputDigit(value)" value="8">8</button>
+                    <button onclick="inputDigit(value)" value="9">9</button>
+                    <button onclick="inputDigit(value)" value="4">4</button>
+                    <button onclick="inputDigit(value)" value="5">5</button>
+                    <button onclick="inputDigit(value)" value="6">6</button>
+                    <button onclick="inputDigit(value)" value="1">1</button>
+                    <button onclick="inputDigit(value)" value="2">2</button>
+                    <button onclick="inputDigit(value)" value="3">3</button>
+                </div>
+                <div class="numbers grid-0">
+                    <button onclick="inputDigit(value)" value="0" class="w-100">0</button>
+                    <button onclick="inputDigit(value)" value=".">.</button>
+                </div>
+            </div>
+            <div class="numbers flex gap flex-column">
+                <button onclick="inputDigit(value)" value="+">+</button>
+                <button onclick="inputDigit(value)" value="*">*</button>
+                <button onclick="inputDigit(value)" value="-">-</button>
+                <button onclick="inputSummit()" value="=" class="igual">=</button>
+            </div>
+        </div>
+        
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

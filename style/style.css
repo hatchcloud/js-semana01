@@ -1,0 +1,189 @@
+:root{
+    --gap: 32px;
+    --color-dark-blue: hsla(213, 19%, 18%, 1);
+    --color-black: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    --color-light-gray: rgb(76, 80, 85);
+    --color-medium-gray: hsla(217, 12%, 54%, 1);
+    --color-orange: hsla(25, 97%, 53%, 1);
+    --color-very-dark-blue: hsla(218, 11%, 8%, 1);
+    --color-white: hsla(0, 0%, 100%, 1);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+
+body{
+    font-family: 'Overpass', sans-serif;
+    display: grid;
+    place-content: center;
+    min-block-size: 100dvb;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    color: var(--color-light-gray);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+body,p,h1,h2,h3,h4,h5,h6,s {
+    margin: 0rem;
+}
+
+
+.box-number{
+    background: linear-gradient(167.95deg, #FBFBFB 0%, rgba(251, 251, 251, 0.2) 100%);
+    border: 1px solid #FFFFFF;
+    box-shadow: 7px 7px 20px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(25px);
+    border-radius: 18px;
+    padding: 10px;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-0{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.numbers button {
+    border-style: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3F3F3;
+    box-shadow: 0px 1px 50px 10px rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #707070;
+    height: 76px;
+    width: 80px;
+}
+
+.numbers button:hover {
+    background: #e2e2e2;
+    color: #707070;
+}
+
+.box-number{
+    display: flex;
+    gap: 10px;
+}
+
+/* Form styles */
+form {    
+    font-size: 20px;  
+    max-width: 400px;
+    min-width: 300px;
+    margin: 30px auto;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="radio"] {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  form input[type="radio"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+
+  form input[type="submit"] {
+    background-color: #39E394;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #2dac70;
+  }
+  
+.label-title{   
+    text-transform: uppercase;
+}
+
+
+.igual{
+    height: 160px !important;
+    background-color: #39E394 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.igual:hover{
+    background-color: #2dac70 !important;
+}
+
+.w-100{
+    width: 100% !important;
+}
+
+.h-100{
+    height: 100% !important;
+}
+.flex{
+    display: flex;
+}
+
+.gap{
+    gap: 10px;
+}
+.no-margin{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.number-card{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.flex-column{
+    flex-direction: column;
+}
+
+.resultado{
+    width: 400px;
+}
+
+h3{
+    font-size: 20px !important;
+    margin-top: 30px !important;
+    text-transform: uppercase
+}
+
+#resultNumber{
+    font-size: 28px;
+}
+
+@media screen and (max-width: 1200px){
+    .number-card{
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
